@@ -6,8 +6,9 @@ module.exports = function dateSample(sampleActivity) {
 
   if (typeof(sampleActivity) === 'string') {
     let numSampleActivity = parseInt(sampleActivity);
-if (numSampleActivity ==NaN && numSampleActivity ==Infinity) {return false}
-    if (numSampleActivity > MODERN_ACTIVITY && numSampleActivity >= 0) {return false}
+	if(numSampleActivity !== numSampleActivity) {return false};
+
+    if (numSampleActivity > MODERN_ACTIVITY || numSampleActivity <= 0) {return false}
 	
 	else {
       const ln2 = 0.693;
