@@ -1,4 +1,4 @@
-module.exports = module.exports = function getSeason(date) {
+module.exports = function getSeason(date) {
   let message = 'Unable to determine the time of year!';
     let month = date.getUTCMonth();
 if (month>11 || month <0) throw message;
