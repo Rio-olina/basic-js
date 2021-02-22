@@ -1,10 +1,13 @@
+
 module.exports = function getSeason(date) {
   let message = 'Unable to determine the time of year!';
-    let month = date.getUTCMonth();
+if (arguments.length >0) {
+let month = date.getUTCMonth();
+
 if (month>11 || month <0) throw message;
 if (typeof(month) !== 'number') throw message;
-  if (date.length!==0){
-	season = " ";
+
+  	season = " ";
 switch (month) {
       case 11:
       case 0:
@@ -23,11 +26,12 @@ switch (month) {
         break;
      default:
         season = 'autumn';
-      		}
-		
-  return season;}
+} return season;
+};
+	//if (typeof(season) !== 'string') throw message;	
+	
+	return message}
 		
   
 
-  throw message;
-}
+  
